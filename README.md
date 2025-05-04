@@ -64,3 +64,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Features Historic
+
+1. I'm Create UserRepository, but is wrong, the services layer comes before
+2. Finnaly create ServiceLayer for User(UserService) and ServiceInterface with generics, and UserServiceInterface for implementations specific, add services providers, not define to the functions in UserService 
+
