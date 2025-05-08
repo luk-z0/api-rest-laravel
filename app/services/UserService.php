@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
-use App\Repositories\UserRepository;
+use App\Repositories\UserRepositoryInterface;
 use App\Services\Interfaces\UserServiceInterface;
 use Illuminate\Support\Collection;
 
@@ -11,7 +11,7 @@ use Illuminate\Support\Collection;
 class UserService implements UserServiceInterface
 {
     protected $repository;
-    public function __construct(UserRepository $repository)
+    public function __construct(UserRepositoryInterface $repository)
     {
         $this->$repository = $repository;
     }
