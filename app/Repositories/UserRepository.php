@@ -4,6 +4,8 @@ namespace App\Repositories;
 
 use App\Models\User;
 use \Illuminate\Database\Eloquent\Collection;
+use App\Repositories\Interfaces\UserRepositoryInterface;
+
 
 class UserRepository implements UserRepositoryInterface
 {
@@ -29,13 +31,13 @@ class UserRepository implements UserRepositoryInterface
         return $this->model->create($data);
     }
 
-    public function update(int $id, array $data): int
+    public function update(int $id, array $data): ?User
     {
         $user = $this->find($id);
         if ($user) {
-            return $user->update($data);
+            $user->update($data);
         }
-        return false;
+        return $user;
     }
 
     public function delete(int $id): bool
