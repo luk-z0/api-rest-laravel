@@ -73,3 +73,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 4. Create UserRepositoryInterface for respect to DIP, fix to decoupling in the UserService constructor
 5. Delete UserServiceProvider, refactored for other ideas, amd edit AppServiceProvider, add dependency injection to inject the UserRepository in to User Service
 6. Fix in bugs, service provider definition and classes importations
+7. Define functions in UserController for CRUD starts

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\Interfaces\UserServiceInterface;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -17,6 +18,14 @@ class UserController extends Controller
 
     public function index(): JsonResponse
     {
-        return response()->json(true);
+        return response()->json($this->users->all());
     }
+
+    public function create(Request $request) {}
+
+    public function read(Request $request, int $id) {}
+
+    public function update(Request $request, int $id) {}
+
+    public function destroy(Request $request, int $id) {}
 }
