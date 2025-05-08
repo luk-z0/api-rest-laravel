@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Repositories\UserRepository;
+use App\Services\Interfaces\UserServiceInterface;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
 
     protected $users;
 
-    public function __construct(UserRepository $users)
+    public function __construct(UserServiceInterface $usersServices)
     {
-        $this->users = $users;
+        $this->users = $usersServices;
     }
 
     public function index(): JsonResponse
